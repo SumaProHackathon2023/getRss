@@ -8,3 +8,6 @@
    - streamlit
    - ラズパイ使ってサーバーとして動かす
 - 期限切れのやつは削除する
+
+## git練習
+- ichimura push
