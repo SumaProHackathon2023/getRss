@@ -12,7 +12,7 @@ class SendFirebase():
         self.webLink = webLink
 
     # 実際に送信するためのクラス定義
-    def sendFirebase(self):
+    def sendFirebase(self) -> None:
         cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
         firebase_admin.initialize_app(cred)
         db = firestore.client()
@@ -22,4 +22,4 @@ class SendFirebase():
 
 if __name__ == "__main__":
     sendFirebase = SendFirebase(webLink="testLink")
-    sendFirebase.main()
+    sendFirebase.sendFirebase()
