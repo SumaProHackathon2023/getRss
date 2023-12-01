@@ -1,5 +1,14 @@
 # getRss
 
+## 環境構築
+- firestoreの環境変数があるので、こちらを確認しながらダウンロード
+https://handy-tortoise-80f.notion.site/getRss-b85d47d2c4944c47adefdb72f333c76b?pvs=4
+- pythonのライブラリをインストールする
+```
+pip install firebase-admin
+pip install google-cloud-firestore
+```
+
 ## 必要そうな機能
 - rssを持ってくる
 - firebaseに送信する
