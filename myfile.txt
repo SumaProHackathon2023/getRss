@@ -1,10 +1,10 @@
-title:学生起業家No.1を決める「G-1スタートアップグランプリ」link:https://connpass.com/event/304066/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:CDLE名古屋勉強会「ChatGPT Night vol.2」link:https://cdlenagoya.connpass.com/event/303671/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:【大阪開催】「ルールズ・オブ・プログラミング」読書会vol.2link:https://cpp-osaka.connpass.com/event/304062/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:JAWS-UG 新潟 プチキャッチアップ 2023 #49link:https://jawsug-niigata.connpass.com/event/304065/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:第198回CoderDojo名古屋link:https://coderdojo-nagoya.connpass.com/event/304061/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:『並行プログラミング入門』読書会 #53link:https://mobmob.connpass.com/event/304063/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:【オンライン開催】「C++20 ライブラリ機能1」 読書会 vol.15link:https://cpp-osaka.connpass.com/event/304060/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:【苦悶式】技術英文読解トレーニング　第28回【Painful】link:https://elv.connpass.com/event/304059/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:平日夜開催！自由参加　もくもく会link:https://morning-activity.connpass.com/event/304058/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
-title:第19回 Ras-Duino もくもく会link:https://ras-duino.connpass.com/event/304051/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom|
+title:【会場開催】第87回CoderDojo久留米 link:https://coderdojo-kurume.connpass.com/event/304107/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/23 14:00 ～ 16:30 更新日時:2023-12-02T10:04:06+09:00
+title:部内LT 2023-12-7 link:https://ricora.connpass.com/event/304180/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/07 18:30 ～ 20:30 更新日時:2023-12-02T09:24:41+09:00
+title:メタバースビジネスの新潮流　xR技術やメタバースは顧客体験をどのように変えるのか link:https://connpass.com/event/304135/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/13 17:00 ～ 18:00 更新日時:2023-12-02T09:01:35+09:00
+title:IT系&誰でも参加OK！もくもく会_朝活_12/9(土) link:https://morimori.connpass.com/event/304178/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/09 08:00 ～ 09:30 更新日時:2023-12-02T08:23:02+09:00
+title:AWS re:Invent 2023 ランチタイムおさらい会！（by JAWS-UG有志） link:https://jawsug.connpass.com/event/304168/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/06 12:00 ～ 13:00 更新日時:2023-12-02T07:37:30+09:00
+title:Accessiブランチ #22 link:https://accessiblunch.connpass.com/event/304175/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/21 12:30 ～ 14:30 更新日時:2023-12-02T06:43:47+09:00
+title:第40回初心者向け JavaScriptもくもく会（日中） link:https://javascript-starters.connpass.com/event/304170/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/05 13:00 ～ 15:00 更新日時:2023-12-02T05:01:29+09:00
+title:第41回 CoderDojo厚木 link:https://coderdojo-atsugi.connpass.com/event/303974/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/17 10:30 ～ 12:30 更新日時:2023-12-02T04:58:35+09:00
+title:第39回初心者向け JavaScriptもくもく会 link:https://javascript-starters.connpass.com/event/304169/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/04 19:00 ～ 21:00 更新日時:2023-12-02T04:21:50+09:00
+title:Fukuoka Research Club (フリクラ）vol.1 link:https://connpass.com/event/303993/?utm_campaign=recent_events&utm_source=feed&utm_medium=atom 開催日時: 2023/12/21 19:00 ～ 22:00 更新日時:2023-12-02T00:01:29+09:00
