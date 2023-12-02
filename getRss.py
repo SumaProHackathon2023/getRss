@@ -1,6 +1,6 @@
 import feedparser
-import pprint
 import time
+
 from sendRssData import SendRssData
 
 # rssDataを取得して、entriesのvalueを抽出
