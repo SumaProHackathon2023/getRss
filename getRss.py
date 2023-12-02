@@ -19,7 +19,6 @@ while True:
 # print(rssDta)
 
 #print(len(f))
-
 # file = open('myfile.txt', 'w', encoding = 'UTF-8')
 # for article in f.entries:
 #     file.write('title:' + article.title + ' ' + 'link:' + article.link)

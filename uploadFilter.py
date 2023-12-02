@@ -25,6 +25,7 @@ class UploadFilter():
         else:
             print("あってる")
 
+
 if __name__ == '__main__':
     # 確認のためのデータ取得
     url = "https://connpass.com/explore/ja.atom"
