@@ -1,15 +1,20 @@
 import feedparser
 
 class UploadFilter():
-    def __init__(self, f: feedparser.util.FeedParserDict) -> None:
-        self.f = f
+    
+    # コンストラクタ
+    def __init__(self, rssData: list) -> None:
+        self.rssData = rssData #呼び出し元から受け取る変数を定義
+        self.new_Information = [] # 結果を格納するための変数
 
-    def main(self) -> None:
-        print(self.f.entries[0].title)
+    # この関数をgetRss.pyでループして起動してく
+    def filtering(self, rssData) -> None:
+        for article in self.f.entries:
+            new_Information.append(article)
 
 if __name__ == '__main__':
     # 確認のためのデータ取得
     url = "https://connpass.com/explore/ja.atom"
     f = feedparser.parse(url)
-    uploadFilter = UploadFilter(f)
-    uploadFilter.main()
+    uploadFilter = UploadFilter(f.entries[0].title)
+    uploadFilter.filtering(f.entries[1].title)
