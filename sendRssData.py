@@ -27,6 +27,12 @@ class SendRssData():
             # 差分用のself.rssCashに、新しい差分の一番新しいイベントを入れる
             self.rssCash = rssData[0]
 
+            # デバッグ用
+            print("sendRssData_true")
+        else:
+            print("sendRssData_false")
+
+
     def differebcingRss(self, rssData) -> feedparser.util.FeedParserDict:
         """
         rssDataの中から新しいイベントだけを抽出する

@@ -12,11 +12,13 @@ sendRssData = SendRssData(rssData)
 
 # rssのイベント追加をトリガーに、新しいイベントをfirebaseに送信する
 while True:
-    # rssの取得して、データ送信のための関数を呼び出す。
+    # rssの取得して、データ送信のための関数を呼び出す
     rssData = feedparser.parse(url).entries
     sendRssData.sendRssData(rssData)
-    time.sleep(1)
+    time.sleep(10)
 
+    # デバッグ用
+    print("getRss_pass")
     # # 新しいイベントが追加されたかのテスト用 #
     # s = [rssData[len(rssData) - _-1] for _ in range(len(rssData))] #entriesを反転させる
     # sendRssData.sendRssData(s)   #確認
