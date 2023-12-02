@@ -9,6 +9,10 @@ class SendRssData():
     def __init__(self, rssData: feedparser.util.FeedParserDict) -> None:
         self.rssData = rssData #呼び出し元から受け取る変数を定義
         self.rssCash = rssData[0]
+        cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
+        firebase_admin.initialize_app(cred)
+        self.db = firestore.client()
+
 
     def sendRssData(self, rssData):
 
@@ -42,12 +46,9 @@ class SendRssData():
         return rssData[:count]
 
     def setFirebase(self, rssDiff) -> None:
-        cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
-        firebase_admin.initialize_app(cred)
-        db = firestore.client()
 
         # 更新のある要素一つ一つをfirebaseに送信する
-        [db.collection("event").add({"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link }) for newRss in rssDiff]
+        [self.db.collection("event").add({"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link }) for newRss in rssDiff]
         print("flag_setFirebase")
 
 if __name__ == '__main__':
