@@ -1,11 +1,15 @@
-class UploadFilter():
-    def __init__(self) -> None:
-        pass
+import feedparser
 
-    def main() -> None:
-        pass
+class UploadFilter():
+    def __init__(self, f: feedparser.util.FeedParserDict) -> None:
+        self.f = f
+
+    def main(self) -> None:
+        print(self.f.entries[0].title)
 
 if __name__ == '__main__':
-    uploadFilter = UploadFilter()
+    # 確認のためのデータ取得
+    url = "https://connpass.com/explore/ja.atom"
+    f = feedparser.parse(url)
+    uploadFilter = UploadFilter(f)
     uploadFilter.main()
-
