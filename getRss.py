@@ -3,21 +3,22 @@
 # わかりづらかったら、コメントアウトめちゃめちゃ使っていいよ
 import feedparser
 import pprint
-# from uploadFilter import UploadFilter
+from uploadFilter import UploadFilter
 
 url = "https://connpass.com/explore/ja.atom"
-f = feedparser.parse(url)
-rssData = []
-# uploadFilter = UploadFilter(rssData)
-# while True:
-#     uploadFilter.filtering(rssData)
-# for article in f.entries:
-#     rssData.ap{"nd(coitle": selarticle.title,ebLink": selarticlebl }
- 
+rssData = feedparser.parse(url).entries
+uploadFilter = UploadFilter(rssData)
+# pprint.pprint(rssData)
 
+rssData = feedparser.parse(url).entries
+uploadFilter.updateRssData(rssData)
+while True:
+    rssData = feedparser.parse(url).entries
+    uploadFilter.updateRssData(rssData)
 
-p# rint(rssData)#print(leen(f))
-#ppint.pprint(f)
+# print(rssDta)
+
+#print(len(f))
 # file = open('myfile.txt', 'w', encoding = 'UTF-8')
 # for article in f.entries:
 #     file.write('title:' + article.title + ' ' + 'link:' + article.link)
