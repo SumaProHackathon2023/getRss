@@ -11,7 +11,7 @@ class SendRssData():
         self.rssCash = rssData[0]
 
     def sendRssData(self, rssData):
-        
+
         # そもそも更新があるかどうかを判定
         if self.rssCash != rssData[0]:
             # 新しいイベントは何があるかを比較する
@@ -45,9 +45,10 @@ class SendRssData():
         cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
         firebase_admin.initialize_app(cred)
         db = firestore.client()
-        data = [{"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link } for newRss in rssDiff]
-        db.collection("event").add(data)
-        print("test")
+
+        # 更新のある要素一つ一つをfirebaseに送信する
+        [db.collection("event").add({"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link }) for newRss in rssDiff]
+        print("flag_setFirebase")
 
 if __name__ == '__main__':
     # 確認のためのデータ取得
