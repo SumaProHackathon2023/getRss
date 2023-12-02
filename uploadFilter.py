@@ -1,4 +1,8 @@
 import feedparser
+import firebase_admin
+from firebase_admin import credentials
+from sendFirebase import SendFirebase
+from firebase_admin import firestore
 
 class UploadFilter():
 
@@ -19,8 +23,9 @@ class UploadFilter():
             #print(rssData[0])
             #print("diff")
             # 新しいイベントは何があるかを比較する
-            self.differebcingRss(rssData)
+            rssDiff = self.differebcingRss(rssData)
             # 出した差分をsendFirebaseで送信処理を実行
+            SendFirebase(rssDiff).sendFirebase()
             # 差分用のself.rssCashに、新しい差分の一番新しいイベントを入れる
             self.rssCash = rssData[0]
         else:
@@ -43,6 +48,14 @@ class UploadFilter():
                 break
         print(len(rssData[:count]))
         return rssData[:count]
+
+    def sendFirebase(self, rssDiff) -> None:
+        cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
+        firebase_admin.initialize_app(cred)
+        db = firestore.client()
+        data = [{"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link } for newRss in rssDiff]
+        db.collection("event").add(data)
+        print("test")
 
 if __name__ == '__main__':
     # 確認のためのデータ取得
