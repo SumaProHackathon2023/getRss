@@ -3,9 +3,11 @@
 # わかりづらかったら、コメントアウトめちゃめちゃ使っていいよ
 import feedparser
 import pprint
+from uploadFilter import UploadFilter
 
 url = "https://connpass.com/explore/ja.atom"
 f = feedparser.parse(url)
-#print(len(f))
-#pprint.pprint(f)
 
+uploadFilter = UploadFilter(f)
+while True:
+    uploadFilter.main()
