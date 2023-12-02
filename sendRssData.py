@@ -1,10 +1,9 @@
 import feedparser
 import firebase_admin
 from firebase_admin import credentials
-from sendFirebase import SendFirebase
 from firebase_admin import firestore
 
-class UploadFilter():
+class SendRssData():
 
     # コンストラクタ
     def __init__(self, rssData: feedparser.util.FeedParserDict) -> None:
@@ -12,12 +11,7 @@ class UploadFilter():
         self.new_Information = [] # 結果を格納するための変数
         self.rssCash = rssData[0]
 
-    # この関数をgetRss.pyでループして起動してく
-    def filtering(self, rssData) -> None:
-        for article in self.rssData:
-            self.new_Information.append(article)
-
-    def updateRssData(self, rssData):
+    def sendRssData(self, rssData):
         if self.rssCash != rssData[0]:
             #print(self.rssCash)
             #print(rssData[0])
@@ -25,7 +19,7 @@ class UploadFilter():
             # 新しいイベントは何があるかを比較する
             rssDiff = self.differebcingRss(rssData)
             # 出した差分をsendFirebaseで送信処理を実行
-            SendFirebase(rssDiff).sendFirebase()
+            self.sendFirebase(rssDiff)
             # 差分用のself.rssCashに、新しい差分の一番新しいイベントを入れる
             self.rssCash = rssData[0]
         else:
@@ -61,5 +55,5 @@ if __name__ == '__main__':
     # 確認のためのデータ取得
     url = "https://connpass.com/explore/ja.atom"
     f = feedparser.parse(url)
-    uploadFilter = UploadFilter(f.entries[0].title)
-    uploadFilter.filtering(f.entries[1].title)
+    SendRssData = SendRssData(f.entries[0].title)
+    SendRssData.filtering(f.entries[1].title)
