@@ -17,9 +17,9 @@ while True:
     sendRssData.sendRssData(rssData)
     time.sleep(1)
 
-    # 新しいイベントが追加されたかのテスト用 #
-    s = [rssData[len(rssData) - _-1] for _ in range(len(rssData))] #entriesを反転させる
-    sendRssData.sendRssData(s)   #確認
-    time.sleep(60)
+    # # 新しいイベントが追加されたかのテスト用 #
+    # s = [rssData[len(rssData) - _-1] for _ in range(len(rssData))] #entriesを反転させる
+    # sendRssData.sendRssData(s)   #確認
+    # time.sleep(60)
 
 
