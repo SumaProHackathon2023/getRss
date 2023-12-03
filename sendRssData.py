@@ -57,19 +57,9 @@ class SendRssData():
     def setFirebase(self, rssDiff) -> None:
 
         # 更新のある要素一つ一つをfirebaseに送信する
-        [self.db.collection("event").add({"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link }) for newRss in rssDiff]
+        [self.db.collection("event").add({"companyName": "empty", "date": newRss.summary[5:30], "title": newRss.title, "webLink": newRss.link}) for newRss in rssDiff]
         print("flag_setFirebase")
 
-    def getFirebaseCache(self):
-
-        doc_ref = self.db.collection("cacheEvent").document("9sqOuhxLDGS2paX3VWd8")
-
-        doc = doc_ref.get()
-        if doc.exists:
-            print(f"Document data: {doc.to_dict()}")
-        else:
-            print("No such document!")
-        return doc
     def setFirebaseCache(self):
         self.db.collection("cacheEvent").add(self.rssCash)
 
