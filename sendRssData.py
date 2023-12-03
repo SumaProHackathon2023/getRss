@@ -7,11 +7,14 @@ class SendRssData():
 
     # コンストラクタ
     def __init__(self, rssData: feedparser.util.FeedParserDict) -> None:
-        self.rssData = rssData #呼び出し元から受け取る変数を定義
         self.rssCash = rssData[0]
         cred = credentials.Certificate("./annoyingadvertisements-63b44-firebase-adminsdk-qf3k6-b1cd2eba56.json") # ダウンロードした秘密鍵
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
+        # self.cacheEvent = self.getFirebaseCache()
+        self.setFirebaseCache()
+        # print(type(self.cacheEvent))
+        print(type(self.rssCash))
 
 
     def sendRssData(self, rssData):
@@ -57,9 +60,22 @@ class SendRssData():
         [self.db.collection("event").add({"companyName": "empty", "date": "empty", "title": newRss.title, "webLink": newRss.link }) for newRss in rssDiff]
         print("flag_setFirebase")
 
+    def getFirebaseCache(self):
+
+        doc_ref = self.db.collection("cacheEvent").document("9sqOuhxLDGS2paX3VWd8")
+
+        doc = doc_ref.get()
+        if doc.exists:
+            print(f"Document data: {doc.to_dict()}")
+        else:
+            print("No such document!")
+        return doc
+    def setFirebaseCache(self):
+        self.db.collection("cacheEvent").add(self.rssCash)
+
 if __name__ == '__main__':
     # 確認のためのデータ取得
     url = "https://connpass.com/explore/ja.atom"
-    f = feedparser.parse(url)
-    SendRssData = SendRssData(f.entries[0].title)
-    SendRssData.filtering(f.entries[1].title)
+    f = feedparser.parse(url).entries
+    SendRssData = SendRssData(f)
+    # SendRssData.filtering(f.entries[1].title)
