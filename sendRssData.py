@@ -42,16 +42,16 @@ class SendRssData():
         input: 新しく更新されたrssData
         output: rssDataの更新された部分のみ
         """
-        print(len(rssData))
+        # print(len(rssData))   #入ってきた数
         count = 0
         for article in rssData:
             if article != self.rssCash:
+                # print("yes")
                 count += 1
-                print("yes")
             else:
-                print("Noooooooooooooo!!!!!!!!!")
+                # print("Noooooooooooooo!!!!!!!!!")
                 break
-        print(len(rssData[:count]))
+        # print(len(rssData[:count]))   # 更新された数
         return rssData[:count]
 
     def setFirebase(self, rssDiff) -> None:

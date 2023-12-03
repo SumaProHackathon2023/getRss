@@ -1,6 +1,5 @@
 import feedparser
 import time
-
 from sendRssData import SendRssData
 
 # rssDataを取得して、entriesのvalueを抽出
@@ -14,9 +13,9 @@ sendRssData = SendRssData(rssData)
 # print(feedparser.parse(url).entries[0].summary[5:30])
 
 while True:
-    # rssの取得して、データ送信のための関数を呼び出す
+    # rssの取得
     rssData = feedparser.parse(url).entries
-    
+    # データ送信のための関数を呼び出す
     sendRssData.sendRssData(rssData)
     time.sleep(60)
 
